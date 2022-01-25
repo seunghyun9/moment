@@ -1,7 +1,15 @@
 package com.example.demo.kakao;
-/***
- *  전화번호와 메시지를 받아서 전송하는 어플을 만드시오
- *  전화번호는 String telno, 메시지는 String message
+/**
+ * packageName: com.example.demo.calc
+ * fileName   : KakaoApp.java
+ * author     : seunghyun9
+ * date       : 2022-01-24
+ * desc       : 전화번호를 메시지를 받아서 전송하는 앱
+ * ================================
+ * DATE        AUTHOR        NOTE
+ * ================================
+ * 2022-01-24     seunghyun9    최초 생성
+ *
  */
 
 public class KakaoApp {

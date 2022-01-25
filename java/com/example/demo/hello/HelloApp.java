@@ -1,6 +1,15 @@
 package com.example.demo.hello;
-/***
- *  나는 홍길동이고 12살이야
+/**
+ * packageName: com.example.demo.calc
+ * fileName   : HelloApp.java
+ * author     : seunghyun9
+ * date       : 2022-01-24
+ * desc       : 이름과 나이를 받아서 인사말을 출력하는 앱
+ * ================================
+ * DATE        AUTHOR        NOTE
+ * ================================
+ * 2022-01-24     seunghyun9    최초 생성
+ *
  */
 
 

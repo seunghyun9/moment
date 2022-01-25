@@ -1,7 +1,15 @@
 package com.example.demo.login;
-/***
- *  아이디, 비번, 이름을 받아서 로그인하는 앱을 작성하시오
- *  String, String, String
+/**
+ * packageName: com.example.demo.calc
+ * fileName   : LoginApp.java
+ * author     : seunghyun9
+ * date       : 2022-01-24
+ * desc       : 아이디와 비밀번호를 받아서 로그인 하는 앱
+ * ================================
+ * DATE        AUTHOR        NOTE
+ * ================================
+ * 2022-01-24     seunghyun9    최초 생성
+ *
  */
 import java.util.Scanner;
 
