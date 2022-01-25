@@ -6,7 +6,7 @@ import java.util.Scanner;
  * fileName   : CalcDemo.java
  * author     : seunghyun9
  * date       : 2022-01-24
- * desc       : CalcApp 을 실행하는 컨트롤러
+ * desc       : CalcApp 을 실행시켜주는 데모
  * ================================
  * DATE        AUTHOR        NOTE
  * ================================
@@ -23,12 +23,12 @@ public class CalcDemo {
 
         System.out.println("첫번째 숫자 : ");
         int num1 = scanner.nextInt();
-        System.out.println("연산자 : ");
+        System.out.println("연산자 : + - * /  ");
         String opcode = scanner.next();
         System.out.println("두번째 숫자 : ");
         int num2 = scanner.nextInt();
         String res = calcApp.calc(num1, opcode, num2);
-        System.out.println("연산결과 : "+ res);
+        System.out.println("연산결과 : "+res);
 
 
 
