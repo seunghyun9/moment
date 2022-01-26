@@ -9,7 +9,7 @@ package com.example.demo.calc;
  * DATE        AUTHOR        NOTE
  * ================================
  * 2022-01-24     seunghyun9    최초 생성
- *
+ * 2022-01-26 김승현 if, swtich 절 추가, 4친연산 기능 가능하도록함
  */
 
 
@@ -24,10 +24,23 @@ public class CalcApp {
         this.opcode = opcode;
         this.num2 = num2;
         int res = 0;
-        if(opcode.equals("+")){res = num1 + num2;}
-        else if(opcode.equals("-")){res = num1 + num2;}
-        else if(opcode.equals("*")){res = num1 * num2;}
-        else if(opcode.equals("/")){ res = num1 / num2;}
+        /*
+        if (opcode.equals("+")){res = this.num1 + this.num2;}else
+            if (opcode.equals("-")){ res = this.num1 - this.num2;}else
+                if(opcode.equals("*")){ res = this.num1 * this.num2;}else
+                    if(opcode.equals("/")){ res = this.num1 / this.num2;}
+
+         */
+
+        switch (opcode){
+            case "+" : res = this.num1 + this.num2; break;
+            case "-" : res = this.num1 - this.num2; break;
+            case "*" : res = this.num1 * this.num2; break;
+            case "/" : res = this.num1 / this.num2; break;
+
+
+        }
+
 
         return String.format("%d %s %d = %d",this.num1, this.opcode, this.num2, res);
 

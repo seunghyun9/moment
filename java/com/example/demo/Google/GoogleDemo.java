@@ -18,6 +18,8 @@ public class GoogleDemo {
         GoogleApp g = new GoogleApp();
         Scanner s = new Scanner(System.in);
 
+        System.out.println(GoogleApp.Goo);
+
         System.out.println("search 입력");
         String search = s.next();
 
