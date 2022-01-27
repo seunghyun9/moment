@@ -13,12 +13,12 @@ package com.example.App.bmi;
  * 2022-01-25     seunghyun9    최초 생성
  */
 public class BmiApp {
-    static public String BMI = "BMI";
+    static public String BMI_TITLE = "BMI";
     String name;
     int cm;
     int kg;
 
-    public String bmi(String name, int cm, int kg){
+    public String getbmi(String name, int cm, int kg){
         this.name = name;
         this.cm = cm;
         this.kg = kg;

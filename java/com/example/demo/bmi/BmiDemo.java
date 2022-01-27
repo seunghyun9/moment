@@ -16,23 +16,10 @@ import java.util.Scanner;
  * 2022-01-25     seunghyun9    최초 생성
  */
 public class BmiDemo {
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        BmiApp b = new BmiApp();
+    public static String excute(String name, int cm, int kg) {
+        BmiApp bmiApp = new BmiApp();
 
-        System.out.println(BmiApp.BMI);
-
-        System.out.println("이름이 무엇입니까");
-        String name = s.next();
-
-        System.out.println("키를 입력하시오");
-        int cm = s.nextInt();
-
-        System.out.println("몸무게를 입력하시오");
-        int kg  = s.nextInt();
-
-        String res = b.bmi(name,cm,kg);
-        System.out.println(res);
+        return bmiApp.getbmi(name,cm,kg);
 
 
     }

@@ -16,7 +16,7 @@ package com.example.demo.Google;
  */
 public class GoogleApp {
 
-    public static String Goo = "Google";
+    public static String Google_TITle = "Google";
     private  String search;
     public String google(String search){
         this.search = search;

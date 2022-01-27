@@ -32,18 +32,26 @@ package com.example.demo.grade;
  */
 public class GradeApp {
     public static String GRADE_TITLE = "성적표";
-    private String name;
-    private int kor;
-    private int eng;
-    private int math;
-    public String getGrade(String name, int kor, int eng, int math){
-        this.name = name;
-        this.kor = kor;
-        this.eng = eng;
-        this.math = math;
-        int total = 0;
-        int avg = 0;
-        String pass = (avg >= 60) ? "합격" : "불합격" ;
+    private String name2;
+    private int korea;
+    private int english;
+    private int math2;
+    private String position;
+    private String vita;
+    public String getGrade(String somthingname, int korgrade, int enggrade, int mathgrade){
+        this.name2 = somthingname;
+        this.korea = korgrade;
+        this.english = enggrade;
+        this.math2 = mathgrade;
+        int total = korea + english + math2;
+        int avg = total / 3 ;
+        String pass ;
+        if (avg >= 60){pass ="합격";}
+        else{pass = "불합격";}
+        /*
+        (avg >= 60) ? "합격" : "불합격"
+         */
+
         String grade = String.format(" * ########## %s ########\n" +
                 " * 이름: %s\n" +
                 " * > 국어: %d점\n" +
@@ -52,7 +60,7 @@ public class GradeApp {
                 " * 총점: %d점\n" +
                 " * 평균(정수): %d점\n" +
                 " * 합격여부: %s\n" +
-                " * #######################", GRADE_TITLE, name, kor, eng, math, total, avg, pass);
+                " * #######################", GRADE_TITLE, name2, korea, english, math2, total, avg, pass);
         return grade;
     }
 }

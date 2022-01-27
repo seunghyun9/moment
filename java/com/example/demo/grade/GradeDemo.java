@@ -14,14 +14,10 @@ import java.util.Scanner;
  * 2022-01-26     seunghyun9    최초 생성
  */
 public class GradeDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public String excute(String name, int kor, int eng, int math) {
         GradeApp gradeApp = new GradeApp();
-        String name = scanner.next();
-        int kor = scanner.nextInt();
-        int eng = scanner.nextInt();
-        int math = scanner.nextInt();
-        String grade = gradeApp.getGrade(name, kor, eng, math);
-        System.out.println(grade);
+
+        return "";
+
     }
 }

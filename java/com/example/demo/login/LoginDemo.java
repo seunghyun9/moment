@@ -16,23 +16,11 @@ import java.util.Scanner;
 
 public class LoginDemo {
 
-    public static void main(String[] args){
+    public static String excute(String name, String id, String pw){
         LoginApp loginApp =  new LoginApp();
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println(loginApp.LOGIN_TITLE);
+        return loginApp.login(id, pw, name);
 
-        System.out.println("이름을 입력하시오");
-        String name = scanner.next();
-
-        System.out.println("아이디를 입력하시오");
-        String id = scanner.next();
-
-        System.out.println("비밀번호를 입력하시오");
-        String pw  = scanner.next();
-
-        String res = loginApp.login(id, pw, name);
-        System.out.println(res);
 
 
     }
