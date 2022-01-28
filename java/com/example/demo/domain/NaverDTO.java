@@ -1,4 +1,4 @@
-package com.example.demo.Naver;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.Naver
@@ -14,8 +14,32 @@ package com.example.demo.Naver;
  * ================================
  * 2022-01-25     seunghyun9    최초 생성
  */
-public class NaverApp {
+public class NaverDTO {
     static String Naver = "Naver";
+
+    private String id;
+    private String pw;
+
+    public String getID(){
+        return id;
+    }
+    public void setId(String id){
+        this.id = id;
+    }
+
+
+    public String getPw(){
+        return id;
+    }
+
+    public void setPw(String pw) {
+        this.pw = pw;
+    }
+}
+
+
+
+    /*
     String id;
     String pw;
 
@@ -25,9 +49,10 @@ public class NaverApp {
 
         return String.format("ID: %S, PW: %s", this.id,this.pw);
 
+     */
 
 
 
-    }
 
-}
+
+

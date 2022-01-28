@@ -1,6 +1,6 @@
-package com.example.demo.Google;
+package com.example.demo.service;
 
-import java.util.Scanner;
+import com.example.demo.domain.GoogleDTO;
 
 /**
  * packageName: com.example.demo.Google
@@ -13,11 +13,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25     seunghyun9    최초 생성
  */
-public class GoogleDemo {
-    public static String excute(String search ) {
-        GoogleApp googleApp = new GoogleApp();
+public class GoogleService {
+    public String getGoogle(GoogleDTO google){
 
-        return googleApp.google(search);
+        return  String.format("입력하신 검색어는 %s입니다.", google.getSearch());
 
 
     }

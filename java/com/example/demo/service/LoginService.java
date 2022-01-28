@@ -1,6 +1,7 @@
-package com.example.demo.login;
+package com.example.demo.service;
 
-import java.util.Scanner;
+import com.example.demo.domain.LoginDTO;
+
 /**
  * packageName: com.example.demo.calc
  * fileName   : LoginDemo.java
@@ -14,13 +15,10 @@ import java.util.Scanner;
  *
  */
 
-public class LoginDemo {
+public class LoginService {
+    public String gerLogin(LoginDTO login){
 
-    public static String excute(String name, String id, String pw){
-        LoginApp loginApp =  new LoginApp();
-
-        return loginApp.login(id, pw, name);
-
+        return String.format("성공");
 
 
     }

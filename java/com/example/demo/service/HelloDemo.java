@@ -1,4 +1,6 @@
-package com.example.demo.hello;
+package com.example.demo.service;
+
+import com.example.demo.domain.HelloApp;
 
 import java.util.Scanner;
 /**
@@ -19,7 +21,6 @@ public class HelloDemo {
         Scanner scanner = new Scanner(System.in);
         HelloApp helloApp = new HelloApp();
 
-        System.out.println(HelloApp.Hello);
 
         System.out.println("name");
         String name = scanner.next();

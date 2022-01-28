@@ -1,6 +1,7 @@
-package com.example.demo.calc;
+package com.example.demo.service;
 
-import java.util.Scanner;
+import com.example.demo.domain.CalcApp;
+
 /**
  * packageName: com.example.demo.calc
  * fileName   : CalcDemo.java

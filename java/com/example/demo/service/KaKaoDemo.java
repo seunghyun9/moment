@@ -1,9 +1,9 @@
-package com.example.demo.kakao;
+package com.example.demo.service;
 
-import com.example.demo.login.LoginApp;
+import com.example.demo.domain.KakaoApp;
 
 import java.util.Scanner;
-import com.example.demo.kakao.KakaoApp;
+
 /**
  * packageName: com.example.demo.calc
  * fileName   : KakaoDemo.java

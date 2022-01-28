@@ -1,4 +1,4 @@
-package com.example.demo.hello;
+package com.example.demo.domain;
 /**
  * packageName: com.example.demo.calc
  * fileName   : HelloApp.java
@@ -14,7 +14,7 @@ package com.example.demo.hello;
 
 
 public class HelloApp {
-    static String Hello = "헬로우 어플";
+    static String Hello2 = "헬로우 어플";
     String name;
     int age;
 

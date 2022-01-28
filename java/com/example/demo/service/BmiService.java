@@ -1,8 +1,7 @@
-package com.example.demo.bmi;
+package com.example.demo.service;
 
-import com.example.App.bmi.BmiApp;
 
-import java.util.Scanner;
+import com.example.demo.domain.BmiDTO;
 
 /**
  * packageName: com.example.demo.bmi
@@ -15,13 +14,10 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25     seunghyun9    최초 생성
  */
-public class BmiDemo {
-    public static String excute(String name, int cm, int kg) {
-        BmiApp bmiApp = new BmiApp();
-
-        return bmiApp.getbmi(name,cm,kg);
-
-
+public class BmiService {
+    public String getBmi(BmiDTO bmi){
+        //
+        return   String.format(" %s정상", bmi.getName());
     }
 
 
