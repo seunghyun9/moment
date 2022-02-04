@@ -24,8 +24,11 @@ public class TempController2 {
                                "완전탐색",    "탐욕법",  "우선탐색",  "동적계획법"};
 
         for (int i = 0; i < onename.length; i++) {
-            System.out.println(onename[i] + ":" + onesubjects[i] +", "+ onesubjects[i+4]+", "+onesubjects[i+8]);
-            
+            System.out.println(onename[i]
+                    +" : "+onesubjects[i]
+                    +" , "+onesubjects[i+4]
+                    +" , "+onesubjects[i+8]);
+
 
 
         }
