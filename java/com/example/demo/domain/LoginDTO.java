@@ -12,13 +12,30 @@ package com.example.demo.domain;
  * 2022-01-26 김승현 PW값 정의 후 입력시 일치 불일치 결과 생성
  */
 
-public class LoginDTO {
+public class LoginDTO {  public static String LOGIN_TITLE="로그인앱";
+    private String id;
+    private String pw;
+    private String name;
+    public static String PASSWORD = "abc";
 
-    public static String LOGIN_TITLE = "로그인 앱";
-    String id;
-    String pw;
-    String name;
-    static String PASSWORD = "abc";
+    public String getId(){
+        return id;
+    }
+    public void setId(String id){
+        this.id = id;
+    }
+    public String getPw(){
+        return pw;
+    }
+    public void setPw(String pw){
+        this.pw = pw;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
 
 
 

@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.Scanner;
+
 /**
  * packageName: com.example.demo.controller
  * fileName   : ArrayExam
@@ -11,5 +13,5 @@ package com.example.demo.controller;
  * ================================
  * 2022-02-04     seunghyun9    최초 생성
  */
-public class ArrayExam {
-}
+public class ArrayExam {}
+

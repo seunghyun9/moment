@@ -1,17 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.domain.GoogleDTO;
-import com.example.demo.service.GoogleService;
-import com.example.demo.domain.NaverDTO;
-import com.example.demo.service.NaverService;
-import com.example.demo.domain.BmiDTO;
-import com.example.demo.service.BmiService;
-import com.example.demo.domain.CalcApp;
-import com.example.demo.service.CalcDemo;
-import com.example.demo.domain.GradeDTO;
-import com.example.demo.service.GradeService;
-import com.example.demo.domain.LoginDTO;
-import com.example.demo.service.LoginService;
+import com.example.demo.domain.*;
+import com.example.demo.service.*;
 
 import java.util.Scanner;
 
@@ -31,28 +21,20 @@ import java.util.Scanner;
  *
  * return은 함수 또는 메서드를 벗어납니다.
  */
-public class DemoController {
+public class StudentController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        CalcDemo calcDemo = new CalcDemo();
 
-        BmiService bmiService= new BmiService();
         BmiDTO bmi = new BmiDTO();
-
-        GoogleService googleService = new GoogleService();
+        CalcDTO calc = new CalcDTO();
         GoogleDTO google = new GoogleDTO();
-
         GradeDTO grade = new GradeDTO();
-        GradeService gradeService = new GradeService();
-
-        LoginService loginDemo = new LoginService();
-
-        NaverService naverService =new NaverService();
-        NaverDTO naver = new NaverDTO();
+        LoginDTO login = new LoginDTO();
+        StudentService service = new StudentServiceImpl();
 
             while(true) {
                 System.out.println("메뉴 선택");
-                String menu = " 0.EXIT 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN 6.NAVER";
+                String menu = " 0.EXIT 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN ";
                 System.out.println(menu);
                 String select = scanner.next();
                 String res = "";
@@ -65,37 +47,40 @@ public class DemoController {
                         bmi.setName(scanner.next());
                         bmi.setCm(scanner.nextInt());
                         bmi.setKg(scanner.nextInt());
-                        res = bmiService.getBmi(bmi);
+                        res = service.getbmi(bmi);
                         break;
+
                     case "2" :
-                        System.out.println(CalcApp.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
-                        res = calcDemo.excute( scanner.nextInt(),  scanner.next(),  scanner.nextInt());
+                        System.out.println(CalcDTO.CALC_TITLE+"\n숫자1, 연산자, 숫자2 입력");
+                        calc.setNum1(scanner.nextInt());
+                        calc.setOpcode(scanner.next());
+                        calc.setNum2(scanner.nextInt());
+                        res = service.calc(calc);
+
                         break;
                     case "3" :
                         System.out.println(GoogleDTO.Google_TITle+"\n검색어 입력");
                         google.setSearch(scanner.next());
-                        res = googleService.getGoogle(google);
+                        res = service.search(google);
                         break;
+
                     case "4" :
                         System.out.println(GradeDTO.GRADE_TITLE+"\n 이름, 국어, 영어, 수학 입력");
                         grade.setName(scanner.next());
                         grade.setEng(scanner.nextInt());
                         grade.setKor(scanner.nextInt());
                         grade.setMath(scanner.nextInt());
-                        res = gradeService.execute(grade);
+                        res = service.getGrade(grade);
                         break;
+
                     case "5" :
                         System.out.println(LoginDTO.LOGIN_TITLE+"\n ID, PW, Name 입력");
-
+                        login.setName(scanner.next());
+                        login.setId(scanner.next());
+                        login.setName(scanner.next());
+                        res = service.login(login);
                         break;
 
-                    case "6" :
-                        System.out.println("ID, PW 입력");
-                        naver.setId(scanner.next());
-                        naver.setPw(scanner.next());
-                        res = naverService.getNaver(naver);
-
-                        break;
 
 
                     default: res = "WRONG"; break;
