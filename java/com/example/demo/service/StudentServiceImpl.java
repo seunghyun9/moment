@@ -14,9 +14,37 @@ import com.example.demo.domain.*;
  * 2022-02-07     seunghyun9    최초 생성
  */
 public class StudentServiceImpl implements StudentService{
+    /**
+     *
+     * BMI = w / t * t
+     * 고도비만 35이상, 중도비만 30 - 34.9
+     * 경도비만 25 - 29.9 과체중 23-24.9
+     * 정상  18.5-22.9 저체중 18.5미만
+     */
     @Override
-    public String getbmi(BmiDTO bmi) {
-        return String.format(" %s정상", bmi.getName());
+    public String getbmi(BmiDTO param) {
+        double bmi =param.getWeight() /(param.getTall()* param.getTall()) * 10000;
+        String s ="";
+        if(bmi>=35){
+            s= "고도 비만";
+        }else
+        if(bmi>23 && bmi<=34.9){
+            s= "중도 비만";
+        }else
+        if(bmi>25 && bmi<=29.9){
+            s = " 경도 비만(1단계 비만)";
+        }else
+        if(bmi>25 && bmi<=29.9){
+            s = " 과체중";
+        }else
+        if(bmi>25 && bmi<=29.9){
+            s =  "정상";
+        }else
+        if(bmi<18.5){
+            s = "저체중";
+        }
+
+        return s;
     }
 
     @Override

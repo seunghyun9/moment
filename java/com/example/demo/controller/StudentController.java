@@ -40,13 +40,13 @@ public class StudentController {
                 String res = "";
 
                 switch (select){
-                    case "0" :
+                     case "0" :
                         System.out.println("Exit"); return;
                     case "1" :
                         System.out.println(BmiDTO.BMI_TITLE+"\n 이름 키 몸무게 입력");
                         bmi.setName(scanner.next());
-                        bmi.setCm(scanner.nextInt());
-                        bmi.setKg(scanner.nextInt());
+                        bmi.setTall(scanner.nextDouble());
+                        bmi.setWeight(scanner.nextDouble());
                         res = service.getbmi(bmi);
                         break;
 
