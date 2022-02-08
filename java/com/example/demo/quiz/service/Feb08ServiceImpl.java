@@ -18,17 +18,19 @@ public class Feb08ServiceImpl implements Feb08Service {
     @Override
     public void lotto(Scanner scanner) {
         int lotto[] = new int[6];
-        for(int i = 0; i< lotto.length; i++){
-            lotto[i] = (int)(Math.random()*45)+1;
-            for(int j = 0; j<i; j++){
-                if(lotto[i] == lotto[j]){
+        System.out.println("로또 번호 : ");
+        for(int i = 0; i< lotto.length; i++) {
+            int num = (int) (Math.random() * 45) + 1;
+            lotto[i] = num;
+            for (int j = 0; j < i; j++) {
+                if (lotto[i] == lotto[j]) {
                     i--;
-                    break;
                 }
             }
-            System.out.println("로또 번호 :" + lotto[i]);
         }
-
+        for(int i = 0; i< lotto.length; i++) {
+            System.out.println( lotto[i]);
+        }
     }
 
     @Override
@@ -70,11 +72,18 @@ public class Feb08ServiceImpl implements Feb08Service {
                 case 3:
                     System.out.println("행번호를을 입력해주세요. A(1) ~ G(7)");
                     int row2 = scanner.nextInt() - 1;
+                    while (row2 > 6){
+                        System.out.println("존재하지 않는 행입니다.");return;
+                    }
                     System.out.println("열번호를 입력해주세요. 1 ~ 7");
                     int col2 = scanner.nextInt() - 1;
+                    while (col2 > 6){
+                        System.out.println("존재하지 않는 열입니다.");return;
+                    }
                     seat[row2][col2] = " □ ";
                     System.out.println("예약이 취소되었습니다.");
                     break;
+                default:System.out.println("존재하지 않는 메뉴번호 입니다.");break;
             }}
     }
     @Override
