@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.algorithm.controller.AlgorithmController;
 import com.example.demo.member.cotroller.MemberController;
+import com.example.demo.oop.controller.OopController;
 import com.example.demo.oop.controller.PhoneController;
 import com.example.demo.quiz.contorller.QuizController;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +20,7 @@ public class DemoApplication {
 		PhoneController phoneController = new PhoneController();
 		QuizController quizController = new QuizController();
 		AlgorithmController algorithmController = new AlgorithmController();
+		OopController oopController = new OopController();
 
 
 
@@ -32,7 +34,7 @@ public class DemoApplication {
 					memberController.execute(scanner);break;
 				case "2":
 					System.out.println("### OOP ###");
-					phoneController.execute(scanner);break;
+					oopController.execute(scanner);break;
 				case "3":
 					System.out.println("### Quiz ###");
 					quizController.execute(scanner);break;

@@ -46,15 +46,17 @@ public class Feb08ServiceImpl implements Feb08Service {
             for (int j=0; j<7;j++){
                 seat[i][j] = " □ ";}}
         while (true){
-            System.out.println("\n원하시는 메뉴번호를 입력 해주세요.\n1.예약조회 2.예약신청 3.예약취소");
+            System.out.println("\n원하시는 메뉴번호를 입력 해주세요.\n0.Exit 1.예약조회 2.예약신청 3.예약취소");
             int select = scanner.nextInt();
             switch (select){
+            case 0:
+                System.out.println("종료");return;
             case 1 : {for (int i = 0; i < 7; i++) {
                 System.out.print("\n" + list[i] + " ");
                 for (int j = 0; j < 7; j++) {
                     System.out.print(seat[i][j]);}}}break;
 
-                case 2:
+            case 2:
                     System.out.println("행번호를을 입력해주세요. A(1) ~ G(7) ");
                     int row = scanner.nextInt() - 1;
                     while (row > 6){
@@ -69,7 +71,7 @@ public class Feb08ServiceImpl implements Feb08Service {
                     System.out.println("예약 신청되었습니다.");
                     break;
 
-                case 3:
+            case 3:
                     System.out.println("행번호를을 입력해주세요. A(1) ~ G(7)");
                     int row2 = scanner.nextInt() - 1;
                     while (row2 > 6){
@@ -84,7 +86,8 @@ public class Feb08ServiceImpl implements Feb08Service {
                     System.out.println("예약이 취소되었습니다.");
                     break;
                 default:System.out.println("존재하지 않는 메뉴번호 입니다.");break;
-            }}
+            }
+        }
     }
     @Override
     public void bank(Scanner scanner) {
