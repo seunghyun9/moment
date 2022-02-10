@@ -12,11 +12,18 @@ package com.example.demo.member.domain;
  * 2022-01-26 김승현 PW값 정의 후 입력시 일치 불일치 결과 생성
  */
 
-public class LoginDTO {  public static String LOGIN_TITLE="로그인앱";
+public class UserDTO {  public static String LOGIN_TITLE="로그인앱";
+
+    private final static UserDTO userDTO = new UserDTO(); //단 하나만 존재 시키기 위해서 상수화 시켰음
+    public UserDTO(){} // 디폴트 생성자
+    public static UserDTO getInstance(){return userDTO;} //
+
+
     private String id;
     private String pw;
     private String name;
     public static String PASSWORD = "abc";
+
 
     public String getId(){
         return id;

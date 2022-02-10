@@ -15,6 +15,9 @@ package com.example.demo.member.domain;
  * 2022-01-25     seunghyun9    최초 생성
  */
 public class GoogleDTO {
+    private final static GoogleDTO googleDTO = new GoogleDTO();
+    public GoogleDTO(){}
+    public static GoogleDTO getInstance(){return googleDTO;}
 
     public static String Google_TITle = "Google";
     private String search;

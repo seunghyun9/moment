@@ -14,7 +14,7 @@ import com.example.demo.oop.repository.CellPhone;
  * 2022-02-09     seunghyun9    최초 생성
  */
 public class CelPhone extends Phone{
-    protected  boolean portable;
+    protected boolean portable;
     protected String move;
 
 
@@ -36,9 +36,6 @@ public class CelPhone extends Phone{
         this.portable = portable;
     }
 
-    public void setMove(String move) {
-        this.move = move;
-    }
 
     @Override
     public String toString() {

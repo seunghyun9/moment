@@ -18,14 +18,13 @@ public class Phone  {
    protected String company;
    protected String call;
 
-   public Phone(String kind, String company){
-       this.kind = kind;
-       this.company = company;
+   public Phone(String k, String c){
+       this.kind = k;
+       this.company = c;
 
    }
-    public String getKind() {
-        return kind;
-    }
+
+    public String getKind() {return kind;}
     public String getCompany() {
         return company;
     }

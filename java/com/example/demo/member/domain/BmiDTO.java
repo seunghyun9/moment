@@ -13,6 +13,10 @@ package com.example.demo.member.domain;
  * 2022-01-25     seunghyun9    최초 생성
  */
 public class BmiDTO {
+    private final static BmiDTO bmiDTO = new BmiDTO();
+    public BmiDTO(){}
+    public static BmiDTO getInstance(){return bmiDTO;}
+
     static public String BMI_TITLE = "BMI";
     private String name;
     private double tall;

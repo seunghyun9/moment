@@ -14,10 +14,20 @@ package com.example.demo.member.domain;
 
 
 public class CalcDTO {
+
+    private final static CalcDTO calcDTO = new CalcDTO();
+    public CalcDTO(){}
+    public static CalcDTO getInstance(){return calcDTO;}
+
+
     public static String CALC_TITLE = "계산기";
     private int num1;
     private String opcode;
     private int num2;
+
+//private 는 안으로 public 은 안으로
+
+
 
     public int getNum1(){
         return num1;
