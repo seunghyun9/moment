@@ -1,5 +1,6 @@
 package com.example.demo.quiz.service;
 import java.util.Scanner;
+import java.util.Random;
 /**
  * packageName: com.example.demo.quiz.service
  * fileName   : Feb10ServiceImpl
@@ -244,15 +245,59 @@ public class Feb10ServiceImpl implements Feb10Service {
         }
     }
 
-
+    /**
+     * author : sungsuhan
+     * des :
+     * line 변수 생성 후 입력 스캐너 생성
+     * 첫번째 for loop은 0부터 입력값 전까지 돌면서 몇 줄인지를 나타낸다
+     * 만약 입력값 line 을 3이라 생각하자
+     * 두번째 for loop은 i = 0 -> j=0 자리에 별 총 한개 출력
+     *                  i = 1 -> j=0, j=1 자리에 별 총 두개 출력
+     *                  i = 2 -> j=0, j=1, j=2 자리에 별 총 세개 출력
+     **/
 
     @Override
-    public void rectangleStarPrint() {
+    public void rectangleStarPrint(Scanner scanner) {
+        int line;
+        System.out.println("몇 줄 짜리 직각삼각형?");
+        line = scanner.nextInt();
+        for (int i=0; i<line; i++) {
+            for (int j=0; j<=i; j++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
 
     }
-
+    /**
+     * author : sungsuhan
+     * des :
+     * line 변수 생성 후 입력 스캐너 생성
+     * 첫번째 for loop은 0부터 입력값 전까지 돌면서 몇 줄인지를 나타낸다
+     * 만약 입력값 line 을 3이라 생각하자
+     * 첫번째 for loop 속 첫번째 for loop은 i = 0 -> j=2, j=1 두번 공백 출력
+     *                                   i = 1 -> j=2 한번 공백 출력
+     *                                   i = 2 -> 공백없음
+     * 첫번째 for loop 속 두번째 for loop은 i = 0 -> k=1 별 한번 출력
+     *                                   i = 1 -> k=1, k=2, k=3 별 세번 출력
+     *                                   i = 2 -> k=1, k=2, k=3, k=4, k=5 별 다섯번 출력
+     *
+     * 출처 : https://coding-factory.tistory.com/68
+     **/
     @Override
-    public void triangleStarPrint() {
-
+    public void triangleStarPrint(Scanner scanner) { int line;
+        System.out.println("몇 줄 짜리 정삼각형?");
+        line = scanner.nextInt();
+        for (int i=0; i<line; i++) {
+            for (int j=line-1; j>i; j--) {
+                System.out.print(" ");
+            }
+            for (int k=1; k<=i*2+1; k++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
+        }
     }
+
+
 }
